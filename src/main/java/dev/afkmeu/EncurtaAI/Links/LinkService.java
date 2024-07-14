@@ -8,12 +8,14 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
-@Service
-public  LinkService  {
-    private LinkService linkService;
+import static dev.afkmeu.EncurtaAI.Links.LinkRepository.*;
 
-    public LinkerService(LinkService linkService) {
-        this.linkService = linkService;
+@Service
+public  class LinkService  {
+  private LinkRepository linkRepository;
+
+    public LinkService(LinkRepository linkRepository) {
+        this.linkRepository = linkRepository;
     }
 
     public String gerarUrlAleatoria (){
