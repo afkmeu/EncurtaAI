@@ -1,14 +1,7 @@
 package dev.afkmeu.EncurtaAI.Links;
-import jdk.dynalink.linker.LinkerServices;
-import org.antlr.v4.runtime.misc.LogManager;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
-
-import static dev.afkmeu.EncurtaAI.Links.LinkRepository.*;
 
 @Service
 public  class LinkService  {

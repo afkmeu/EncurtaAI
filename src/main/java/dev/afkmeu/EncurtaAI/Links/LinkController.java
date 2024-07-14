@@ -10,10 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 @Service
 @RestController
-public class LinkController extends Link{
- private LinkService linkService;
+public class LinkController{
+
+    private LinkService linkService;
 
     public LinkController(LinkService linkService) {
+
         this.linkService = linkService;
     }
 
@@ -22,7 +24,7 @@ public class LinkController extends Link{
         String urlOriginal = request.get("urlOriginal");
         Link link = linkService.encurtarUrl(urlOriginal);
 
-        String gerarUrlDeRedirecionamentoDoUsuario = "http://localhost:8080/r/r" + link.getUrlEncurtada();
+        String gerarUrlDeRedirecionamentoDoUsuario = "http://localhost:8080/r/" + link.getUrlEncurtada();
 
         LinkResponse response = new LinkResponse(
                 link.getId(),
